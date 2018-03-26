@@ -48,10 +48,11 @@ def reemplazar(arch, tiempoAct,objLeido):
 
 sock = socket.socket(socket.AF_INET, # Internet
 	  socket.SOCK_DGRAM) # UDP
-sock.bind(('127.0.0.1', int(UDP_PORT)))
+sock.bind(('', int(UDP_PORT)))
 
 while True:
     data, addr = sock.recvfrom(1024) # buffer size is 1024 bytes.
+    print(addr)
     tRecibido= datetime.now()
     objLeido =pickle.loads(data)
     nombreArch=str(objLeido.nombre)+'.txt'
