@@ -11,7 +11,7 @@ tamBuffer= int(input())
 
 sock = socket.socket(socket.AF_INET, # Internet
 	  socket.SOCK_STREAM) # TCP
-sock.bind(('127.0.0.1', int(TCP_PORT)))
+sock.bind(('', int(TCP_PORT)))
 sock.listen(1)
 while True:
     s, addr = sock.accept() # buffer size is 1024 bytes.
