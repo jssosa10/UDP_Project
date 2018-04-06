@@ -16,7 +16,7 @@ sock.listen(1)
 while True:
     s, addr = sock.accept() # buffer size is 1024 bytes.
     leido =s.recv(1024)
-    nombreArch2= "video.mp4"
+    nombreArch2= "holi.txt"
     nombreArch= "enviar/"+nombreArch2
     f = open(nombreArch,'rb')
     l = f.read(tamBuffer)

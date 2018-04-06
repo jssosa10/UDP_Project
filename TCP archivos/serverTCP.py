@@ -6,7 +6,7 @@ from datetime import datetime
 TCP_PORT=5000
 if sys.argv[1]:
   TCP_PORT=sys.argv[1]
-print("Ingrese tamaño del buffer")
+print("Ingrese tamano del buffer")
 tamBuffer= int(input())
 
 sock = socket.socket(socket.AF_INET, # Internet
@@ -16,7 +16,7 @@ sock.listen(1)
 while True:
     s, addr = sock.accept() # buffer size is 1024 bytes.
     leido =s.recv(1024)
-    nombreArch= "musica.mp4"
+    nombreArch= "video.mp4"
     s.sendall(nombreArch.encode())
     nombreArch= "enviar/"+nombreArch    
     s.recv(1024)
